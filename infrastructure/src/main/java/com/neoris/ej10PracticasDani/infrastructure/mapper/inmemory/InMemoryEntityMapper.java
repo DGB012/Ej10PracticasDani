@@ -1,0 +1,16 @@
+package com.neoris.ej10PracticasDani.infrastructure.mapper.inmemory;
+
+import java.util.List;
+
+public interface InMemoryEntityMapper<DOMAIN_ENTITY, INMEMORY_ENTITY> {
+    //Es una interfaz genérica va a ser utilizada dentro de todas
+    // las llamadas que hagamos de tipo get dentro de la aplicación.
+
+    DOMAIN_ENTITY toDomainEntity(INMEMORY_ENTITY inMemoryEntity);
+
+    INMEMORY_ENTITY fromDomainEntity(DOMAIN_ENTITY domainEntity);
+
+    List<DOMAIN_ENTITY> toDomainEntityList(List<INMEMORY_ENTITY> inMemoryEntity);
+    List<INMEMORY_ENTITY> fromDomainEntityList (List<DOMAIN_ENTITY> domainEntity);
+
+}
